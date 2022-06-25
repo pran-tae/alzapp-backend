@@ -5,6 +5,7 @@ import { UserModule } from './users/user.module';
 import { MedicalRecordModule } from './medicalRecords/medicalRecord.module';
 import { ToDoModule } from './toDos/toDo.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { MongooseModule } from '@nestjs/mongoose';
     MedicalRecordModule,
     ToDoModule,
     MongooseModule.forRoot(''),
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
